@@ -278,7 +278,7 @@ public class Tela extends javax.swing.JFrame {
 
         time1.setBorderPainted(false);
         time1.setContentAreaFilled(false);
-        time1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        time1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         time1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 time1ActionPerformed(evt);
@@ -289,7 +289,7 @@ public class Tela extends javax.swing.JFrame {
 
         time2.setBorderPainted(false);
         time2.setContentAreaFilled(false);
-        time2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        time2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         time2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 time2ActionPerformed(evt);
@@ -300,7 +300,7 @@ public class Tela extends javax.swing.JFrame {
 
         time3.setBorderPainted(false);
         time3.setContentAreaFilled(false);
-        time3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        time3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         time3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 time3ActionPerformed(evt);
@@ -311,7 +311,7 @@ public class Tela extends javax.swing.JFrame {
 
         time4.setBorderPainted(false);
         time4.setContentAreaFilled(false);
-        time4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        time4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         time4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 time4ActionPerformed(evt);
@@ -332,7 +332,7 @@ public class Tela extends javax.swing.JFrame {
 
         comecarJogo.setBorderPainted(false);
         comecarJogo.setContentAreaFilled(false);
-        comecarJogo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        comecarJogo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         comecarJogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comecarJogoActionPerformed(evt);
@@ -509,7 +509,7 @@ public class Tela extends javax.swing.JFrame {
     }//GEN-LAST:event_hab4ActionPerformed
     
     /**
-     * @param args the command line arguments
+     *  the command line arguments
      */
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */

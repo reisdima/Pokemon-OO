@@ -27,13 +27,16 @@ public class Batalha {
     }
     
     /**
-     *funcao que roda a batalha
+     *
      */
     
     public Batalha(){
         
     }
     
+    /**
+     *funcao que roda a batalha
+     */
     public void comecarBatalha(){
         System.out.println(" ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ Vamos começar! ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ ");
         pokemonAtual();
@@ -50,13 +53,26 @@ public class Batalha {
             System.out.println(" ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ EMPATOU ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ ");*/
     }
     
+    /**
+     *retorna  o 1 pokemon
+     * @return pokemon
+     */
     public Pokemon getPokemon1(){
         return p1;
     }
+
+    /**
+     *retorna o segundo pokemon
+     * @return pokemon
+     */
     public Pokemon getPokemon2(){
         return p2;
     }
     
+    /**
+     *pega a vez para determinar quem comeca atacando
+     * @return pokemon
+     */
     public Pokemon getPokemonVez(){
         if(vez==1){
             return p1;
@@ -66,6 +82,10 @@ public class Batalha {
         }
     }
     
+    /**
+     *retorna qual treinador ataca
+     * @return o treinador
+     */
     public Treinador getTreinadorVez(){
         if(vez==1){
             return t1;
@@ -160,7 +180,7 @@ public class Batalha {
      
     /**
      *determina qual ataque vai ser usado ao clicar o botao
-     * @param numTreinador
+     * @param t treinador
      */
     
     public void ataque(Treinador t){
@@ -181,6 +201,10 @@ public class Batalha {
         }
     }
     
+    /**
+     *funcao que roda o ataque
+     * @param numTreinador
+     */
     public void ataque(int numTreinador){       
         int choice = -1;
         float dano = 0;
@@ -232,18 +256,26 @@ public class Batalha {
     
     /**
      *funcao que aumenta a mana a cada round
-     * @param t1
-     * @param t2
+     * @param t1 treinador1
+     * @param t2 treinador2
      */
     public void recuperaManaPoints(Treinador t1, Treinador t2){
         t1.setMana(t1.getMana()+20);
         t2.setMana(t2.getMana()+20);
     }
     
+    /**
+     *verifica se acabou a funcao
+     * @return vida total
+     */
     public boolean verificaFim(){
         return (t1.getVidaTotal()<=0 || t2.getVidaTotal()<=0);
     }
     
+    /**
+     *quantidade de pokemons
+     * @return vetor quantos pokemons tem
+     */
     public float[] getPorcentagem(){
         float[] porcentagens = new float[6];
         for(int i=0; i<t1.time.pokemons.size(); i++){

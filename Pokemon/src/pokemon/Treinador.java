@@ -26,7 +26,7 @@ public class Treinador {
 	
     /**
      *inicializa a funcao treinador
-     * @param t
+     * @param t time
      */
     public Treinador(Time t) {
         this.time = t;
@@ -46,7 +46,7 @@ public class Treinador {
 
     /**
      *retorna a vida total
-     * @return
+     * @return retorna vida total
      */
     public float getVidaTotal() {
         return vidaTotal;
@@ -54,7 +54,7 @@ public class Treinador {
 
     /**
      *determina a vida total
-     * @param vidaTotal
+     * @param vidaTotal vida total do treinador
      */
     public void setVidaTotal(float vidaTotal) {
         this.vidaTotal = vidaTotal;
@@ -62,7 +62,7 @@ public class Treinador {
       	
     /**
      *funcao que determina qual ataque é usado e seu dano
-     * @return
+     * @return retorna o ataque
      */
     
     public int getAtaqueEscolhido(){
