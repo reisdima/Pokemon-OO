@@ -48,6 +48,7 @@ public class Tela extends javax.swing.JFrame {
     public Batalha battle;
     private Pokemon pokemonVez;
     private Treinador treinadorVez;
+    private int controle = 0;
     
     /**
      * Creates new form Tela
@@ -55,6 +56,7 @@ public class Tela extends javax.swing.JFrame {
     public Tela() {
         
         initComponents();
+        this.setLocationRelativeTo(null);
         pokemonsA = null;
         pokemonsB = null;
         escolherTime.setVisible(false);
@@ -159,36 +161,24 @@ public class Tela extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         batalha.setLayout(null);
-
-        pokemon1.setText("Pokemon");
-        pokemon1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         batalha.add(pokemon1);
         pokemon1.setBounds(80, 80, 100, 130);
 
         pokemon2.setBackground(new java.awt.Color(255, 51, 51));
-        pokemon2.setText("jLabel4");
-        pokemon2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         batalha.add(pokemon2);
         pokemon2.setBounds(80, 300, 100, 130);
-
-        pokemon3.setText("jLabel4");
-        pokemon3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         batalha.add(pokemon3);
         pokemon3.setBounds(80, 510, 100, 130);
 
         pokemon4.setBackground(new java.awt.Color(255, 51, 51));
-        pokemon4.setText("jLabel4");
-        pokemon4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         batalha.add(pokemon4);
         pokemon4.setBounds(1040, 50, 100, 130);
 
         pokemon5.setBackground(new java.awt.Color(255, 51, 51));
-        pokemon5.setText("jLabel4");
         batalha.add(pokemon5);
         pokemon5.setBounds(1030, 260, 100, 130);
 
         pokemon6.setBackground(new java.awt.Color(255, 51, 51));
-        pokemon6.setText("jLabel4");
         batalha.add(pokemon6);
         pokemon6.setBounds(1020, 490, 100, 130);
 
@@ -259,6 +249,7 @@ public class Tela extends javax.swing.JFrame {
         hab4.setBounds(690, 640, 150, 40);
 
         iniciarBatalha.setText("Iniciar Batalha!");
+        iniciarBatalha.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iniciarBatalha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iniciarBatalhaActionPerformed(evt);
@@ -433,6 +424,8 @@ public class Tela extends javax.swing.JFrame {
         for(int i=0; i<vidas.size(); i++){
             vidas.get(i).setValue(Math.round(porcentagem[i]));
         }
+        
+        
         if(battle.verificaFim()){
             for(int i=0; i<habilidades.size(); i++){
                 habilidades.get(i).setVisible(false);
@@ -448,6 +441,13 @@ public class Tela extends javax.swing.JFrame {
         battle.pokemonAtual();
         battle.checaVantagem();
         pokemonVez = battle.getPokemonVez();
+        for(int i=0; i<pokemons.size(); i++){
+            if(pokemons.get(i).getName() == pokemonVez.getNome()){
+                pokemons.get(i).setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+            }
+            else
+                pokemons.get(i).setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        }
         System.out.println("Pokemon vez: " + pokemonVez.getNome());
         exibeHabilidades(pokemonVez);
         treinadorVez = battle.getTreinadorVez();
@@ -476,10 +476,12 @@ public class Tela extends javax.swing.JFrame {
         if(timeA!=null&&timeB!=null){
             for(int i=0; i < 3; i++){
                 pokemons.get(i).setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/" + timeA.pokemons.get(i).getImagem())));
+                pokemons.get(i).setName(timeA.pokemons.get(i).getNome());
                 pokemons.get(i).setVisible(true);
             }
             for(int i=0; i < 3; i++){
                 pokemons.get(i+3).setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/" + timeB.pokemons.get(i).getImagem())));
+                pokemons.get(i+3).setName(timeB.pokemons.get(i).getNome());
                 pokemons.get(i+3).setVisible(true);
             }
             battle = new Batalha(treinadorA, treinadorB);
