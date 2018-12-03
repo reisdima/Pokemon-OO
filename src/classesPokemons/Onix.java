@@ -17,6 +17,7 @@ import tiposPokemon.TipoPedra;
 public class Onix extends TipoPedra {
 
     public Onix() {
+        imagem = "Onix.png";
         nome = "Onix";
         nomeTipo ="Pedra";
         this.healthPoints =120;

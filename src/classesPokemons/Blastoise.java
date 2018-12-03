@@ -18,7 +18,7 @@ public class Blastoise extends TipoAgua {
      *
      */
     public Blastoise() {
-       
+        imagem = "Blastoise.png";
         nome = "Blastoise";
         this.healthPoints =150;
         this.maxHealthPoints = 150;

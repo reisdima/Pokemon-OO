@@ -200,27 +200,27 @@ public class Tela extends javax.swing.JFrame {
         Vida2.setBackground(new java.awt.Color(255, 0, 0));
         Vida2.setForeground(new java.awt.Color(0, 255, 102));
         batalha.add(Vida2);
-        Vida2.setBounds(60, 650, 146, 14);
+        Vida2.setBounds(60, 440, 146, 14);
 
         Vida3.setBackground(new java.awt.Color(255, 0, 0));
         Vida3.setForeground(new java.awt.Color(0, 255, 102));
         batalha.add(Vida3);
-        Vida3.setBounds(60, 450, 146, 14);
+        Vida3.setBounds(60, 650, 146, 14);
 
         Vida4.setBackground(new java.awt.Color(255, 0, 0));
         Vida4.setForeground(new java.awt.Color(0, 255, 102));
         batalha.add(Vida4);
-        Vida4.setBounds(990, 410, 146, 14);
+        Vida4.setBounds(1020, 200, 146, 14);
 
         Vida5.setBackground(new java.awt.Color(255, 0, 0));
         Vida5.setForeground(new java.awt.Color(0, 255, 102));
         batalha.add(Vida5);
-        Vida5.setBounds(990, 650, 146, 14);
+        Vida5.setBounds(1000, 420, 146, 14);
 
         Vida6.setBackground(new java.awt.Color(255, 0, 0));
         Vida6.setForeground(new java.awt.Color(0, 255, 102));
         batalha.add(Vida6);
-        Vida6.setBounds(1020, 210, 146, 14);
+        Vida6.setBounds(1010, 640, 146, 14);
 
         hab1.setText("Habilidade 1");
         hab1.addActionListener(new java.awt.event.ActionListener() {
@@ -448,6 +448,7 @@ public class Tela extends javax.swing.JFrame {
         battle.pokemonAtual();
         battle.checaVantagem();
         pokemonVez = battle.getPokemonVez();
+        System.out.println("Pokemon vez: " + pokemonVez.getNome());
         exibeHabilidades(pokemonVez);
         treinadorVez = battle.getTreinadorVez();
         //treinadorVez.escolheAtaque(pokemonVez);
@@ -473,11 +474,18 @@ public class Tela extends javax.swing.JFrame {
             vidas.get(i).setVisible(true);
         }
         if(timeA!=null&&timeB!=null){
-            
-              battle = new Batalha(treinadorA, treinadorB);
+            for(int i=0; i < 3; i++){
+                pokemons.get(i).setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/" + timeA.pokemons.get(i).getImagem())));
+                pokemons.get(i).setVisible(true);
+            }
+            for(int i=0; i < 3; i++){
+                pokemons.get(i+3).setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/" + timeB.pokemons.get(i).getImagem())));
+                pokemons.get(i+3).setVisible(true);
+            }
+            battle = new Batalha(treinadorA, treinadorB);
         }
         atualizaBatalha();
-        calculaBatalha();
+        //calculaBatalha();
     }//GEN-LAST:event_iniciarBatalhaActionPerformed
 
     private void hab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hab1ActionPerformed

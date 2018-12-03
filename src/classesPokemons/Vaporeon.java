@@ -15,6 +15,7 @@ import tiposPokemon.TipoAgua;
 public class Vaporeon extends TipoAgua {
 
     public Vaporeon() {
+        imagem = "Vaporeon.png";
         nome = "Vaporeon";
         nomeTipo="Agua";
         this.healthPoints =120;

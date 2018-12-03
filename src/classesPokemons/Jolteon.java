@@ -18,7 +18,8 @@ public class Jolteon extends TipoEletrico {
      *  
      */
     public Jolteon() {
-      nome = "Jolteon";
+        imagem = "Jolteon.png";
+        nome = "Jolteon";
         this.healthPoints =120;
         this.maxHealthPoints = 120;
         nomeTipo="Eletrico";

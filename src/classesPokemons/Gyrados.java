@@ -15,8 +15,8 @@ import tiposPokemon.TipoAgua;
 public class Gyrados extends TipoAgua {
 
     public Gyrados() {
-      
-  nome = "Gyrados";
+        imagem = "Gyrados.png";
+        nome = "Gyrados";
         this.healthPoints =150;
         this.maxHealthPoints = 150;
         nomeTipo="Agua";

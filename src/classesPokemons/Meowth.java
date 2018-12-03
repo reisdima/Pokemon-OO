@@ -20,6 +20,7 @@ public class Meowth extends TipoNormal {
      * 
      */
     public Meowth() {
+        imagem = "Meowth.png";
         nome = "Meowth";
         this.healthPoints =100;
         this.maxHealthPoints = 100;

@@ -15,6 +15,7 @@ import tiposPokemon.TipoAgua;
 public class Squirtle extends TipoAgua {
 
     public Squirtle() {
+        imagem = "Squirtle.png";
         nome = "Squirtle";
         nomeTipo = "Agua";
         this.healthPoints =100;

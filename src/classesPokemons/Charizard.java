@@ -18,6 +18,7 @@ public class Charizard extends TipoFogo {
      *150 de hp
      */
     public Charizard() {
+        imagem = "Charizard.png";
         nome = "Charizard";
         this.healthPoints =150;
         this.maxHealthPoints = 150;

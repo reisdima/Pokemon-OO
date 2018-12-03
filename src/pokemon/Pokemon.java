@@ -97,4 +97,7 @@ public class Pokemon {
     public float getDanoPadrao(){
         return danoPadrao;
     }
+    public String getImagem(){
+        return imagem;
+    }
 }

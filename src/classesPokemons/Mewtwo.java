@@ -17,7 +17,7 @@ import tiposPokemon.TipoPsiquico;
 public class Mewtwo extends TipoPsiquico {
 
     public Mewtwo() {
-        
+        imagem = "Mewtwo.png";
         nome = "Mewtwo";
         this.healthPoints =150;
         this.maxHealthPoints = 150;

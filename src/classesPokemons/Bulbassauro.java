@@ -19,6 +19,7 @@ public class Bulbassauro extends TipoPlanta {
       * Pokemon
      */
     public Bulbassauro() {
+        imagem = "Bulbassauro.png";
         nome = "Bulbassauro";
         this.healthPoints =100;
         this.maxHealthPoints = 100;

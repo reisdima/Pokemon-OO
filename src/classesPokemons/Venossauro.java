@@ -15,6 +15,7 @@ import tiposPokemon.TipoPlanta;
 public class Venossauro extends TipoPlanta {
 
     public Venossauro() {
+        imagem = "Venossauro.png";
         nome = "Venossauro";
         nomeTipo="Planta";
         this.healthPoints =120;

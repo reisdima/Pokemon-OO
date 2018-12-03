@@ -15,6 +15,7 @@ import tiposPokemon.TipoFogo;
 public class Flareon extends TipoFogo {
 
     public Flareon() {
+        imagem = "Flareon.png";
         nome = "Flareon";
         this.healthPoints =120;
         this.maxHealthPoints = 120;

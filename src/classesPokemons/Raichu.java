@@ -15,6 +15,7 @@ import tiposPokemon.TipoEletrico;
 public class Raichu extends TipoEletrico {
 
     public Raichu() {
+        imagem = "Raichu.png";
         nome = "Raichu";
         nomeTipo ="Eletrico";
         this.healthPoints =150;
